@@ -223,7 +223,9 @@ Add your company names to the `Config - Companies` tab, then give Claude your li
 - Tier C: companies you keep seeing in job alerts; adjacent industries you're open to; companies that are early but on a trajectory you find interesting
 
 
-**Companies not on Ashby, Greenhouse, Lever, or Gem:** Workday, iCIMS, Taleo, Comeet, and SAP SuccessFactors don't expose public APIs. You can't monitor them directly with this system. For those companies, check their job boards manually or set a Google Alert.
+**Supported ATS platforms:** Ashby, Greenhouse, Lever, Gem, and Workday. These cover the majority of tech and growth-stage companies.
+
+**Unsupported platforms:** iCIMS, Taleo, Comeet, SmartRecruiters, and SAP SuccessFactors don't expose public APIs. For companies on those platforms, check their job boards manually or set a Google Alert. Claude will flag these when you give it your company list.
 
 ---
 
@@ -244,7 +246,7 @@ The scan will start within a few seconds. Click into the running job to watch th
 
 After the run, open your Google Sheet and check the `3 - Opportunities CRM` tab. If you see results, you're set up correctly.
 
-**After that:** the scan runs automatically every weekday at 7:00 AM UTC (2:00 AM Eastern / 11:00 PM Pacific). No action needed.
+**After that:** the scan runs automatically every weekday at 11:23 AM UTC (7:23 AM Eastern / 4:23 AM Pacific). No action needed.
 
 ---
 
@@ -266,10 +268,12 @@ Add a **Status** column value (`Applied`, `Networking`, `Passed`, etc.) to keep 
 ## Adding a new company
 
 1. Open the `Config - Companies` tab
-2. Add a new row with the company name, ATS type, handle, and `Y` in Active
+2. Add a new row: company name, ATS type, handle, `Y` in Active
 3. The next scheduled scan will include it automatically — no code changes needed
 
 The first run for a new company scores all its current jobs. Subsequent runs only score new postings.
+
+**If a company uses non-standard job titles** (e.g. "Lead" instead of "Director" or "VP"), add the relevant seniority keywords to the `Seniority Override` column for that company. This replaces the global seniority filter for that company only — leave it blank for all others.
 
 ---
 
@@ -323,7 +327,8 @@ Test the API URL directly in your browser. For Ashby: `https://api.ashbyhq.com/p
    - **Greenhouse:** `boards.greenhouse.io/**handle**/jobs/job-id` → handle is after `boards.greenhouse.io/`
    - **Lever:** `jobs.lever.co/**handle**/job-id` → handle is after `jobs.lever.co/`
    - **Gem:** `jobs.gem.com/**handle**/job-id` → handle is after `jobs.gem.com/`
-3. If the URL doesn't match any of these patterns, the company uses a different ATS (Workday, Comeet, iCIMS, etc.) and can't be monitored directly
+3. If the URL contains `myworkdayjobs.com`, see the Workday note below
+4. If the URL doesn't match any of these patterns, the company uses an unsupported ATS (Comeet, iCIMS, SmartRecruiters, etc.) and can't be monitored directly
 
 **Quick check:** paste this URL in your browser and replace HANDLE with your guess. If it returns a page of jobs, you've got the right handle and ATS.
 - Ashby: `https://api.ashbyhq.com/posting-api/job-board/HANDLE`
