@@ -2,17 +2,18 @@ import os
 import sys
 from datetime import datetime, timezone
 
-from sheets import get_client, ensure_setup, read_seen_urls, append_scored_urls, append_results, load_companies, load_profile
-from fetchers import FETCHERS
-from filters import passes_title_filter, is_too_old
+from sheets import get_client, ensure_setup, read_seen_urls, append_scored_urls, append_results, load_companies, load_profile, load_search_terms
+from fetchers import FETCHERS, fetch_broad_search
+from filters import passes_title_filter, passes_description_filter, is_too_old
 from scorer import score_jobs
 
 
 def main():
     print(f'[{datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M")} UTC] Strategic Copilot starting')
 
-    api_key   = os.environ.get('ANTHROPIC_API_KEY', '').strip()
-    sheets_id = os.environ.get('GOOGLE_SHEETS_ID', '').strip()
+    api_key      = os.environ.get('ANTHROPIC_API_KEY', '').strip()
+    sheets_id    = os.environ.get('GOOGLE_SHEETS_ID', '').strip()
+    rapidapi_key = os.environ.get('RAPIDAPI_KEY', '').strip()
 
     if not api_key or not sheets_id:
         print('ERROR: ANTHROPIC_API_KEY and GOOGLE_SHEETS_ID must be set')
@@ -24,11 +25,13 @@ def main():
     ensure_setup(client, sheets_id)
 
     print('Loading config from Google Sheets...')
-    companies = load_companies(client, sheets_id)
-    profile   = load_profile(client, sheets_id)
-    seen_urls = read_seen_urls(client, sheets_id)
+    companies    = load_companies(client, sheets_id)
+    profile      = load_profile(client, sheets_id)
+    search_terms = load_search_terms(client, sheets_id)
+    seen_urls    = read_seen_urls(client, sheets_id)
 
     print(f'  {len(companies)} active companies')
+    print(f'  {len(search_terms)} active search terms')
     print(f'  {len(seen_urls)} URLs in dedup cache')
 
     threshold  = int(profile.get('score_threshold', 6) or 6)
@@ -101,6 +104,61 @@ def main():
     print(f'Scored:          {total_scored}')
     print(f'Qualifying:      {len(qualifying)}')
     print(f'{"="*40}')
+
+    # ── Broad search pass ───────────────────────────────────────────────────
+    if rapidapi_key and search_terms:
+        print(f'\n{"="*40}')
+        print('BROAD SEARCH PASS')
+        print(f'{"="*40}')
+        bs_fetched = bs_filtered = bs_new = bs_scored = 0
+
+        for term in search_terms:
+            query = term['query']
+            pages = term['pages']
+            print(f'\nQuery: "{query}"')
+
+            jobs = fetch_broad_search(query, rapidapi_key, pages=pages)
+            bs_fetched += len(jobs)
+            print(f'  Fetched:   {len(jobs)}')
+
+            filtered = [
+                j for j in jobs
+                if not is_too_old(j)
+                and passes_title_filter(j, profile)
+                and passes_description_filter(j, profile)
+            ]
+            bs_filtered += len(filtered)
+            print(f'  Filtered:  {len(filtered)}')
+
+            new_jobs = [j for j in filtered if j.get('job_url') and j['job_url'] not in seen_urls]
+            bs_new += len(new_jobs)
+            print(f'  New:       {len(new_jobs)}')
+
+            if not new_jobs:
+                continue
+
+            print(f'  Scoring {len(new_jobs)} jobs...')
+            scored = score_jobs(new_jobs, profile, api_key)
+            bs_scored += len(scored)
+
+            for s in scored:
+                s['Source Lane'] = 'Lane 2 - Broad Search'
+                url = s.get('Job URL', '')
+                if url and url not in seen_urls:
+                    new_urls.append(url)
+                    seen_urls.add(url)
+
+            hits = [s for s in scored if s.get('Fit Score', 0) >= threshold and len(s) > 2]
+            qualifying.extend(hits)
+            print(f'  Score >= {threshold}: {len(hits)}')
+
+        print(f'\nBroad search totals:')
+        print(f'  Fetched:   {bs_fetched}')
+        print(f'  Filtered:  {bs_filtered}')
+        print(f'  New:       {bs_new}')
+        print(f'  Scored:    {bs_scored}')
+    elif search_terms and not rapidapi_key:
+        print('\nSkipping broad search — RAPIDAPI_KEY not set')
 
     print('\nWriting to Google Sheets...')
     if new_urls:

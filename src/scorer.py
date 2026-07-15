@@ -88,7 +88,7 @@ def _parse(text: str, job_url: str) -> dict:
         'Job Title':            p.get('job_title', ''),
         'Company':              p.get('company', ''),
         'Job URL':              p.get('job_url') or job_url,
-        'Source Lane':          'Lane 1 - Target',
+        'Source Lane':          'Lane 1 - Target',  # overridden by caller for broad search
         'Date Posted':          p.get('date_posted', ''),
         'Fit Score':            int(p.get('fit_score', 0) or 0),
         'Abstract Fit Flag':    fit_flag,

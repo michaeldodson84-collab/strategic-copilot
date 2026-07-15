@@ -169,6 +169,55 @@ def fetch_workday(handle: str, company_name: str, seniority_keywords: list = Non
     return jobs
 
 
+def fetch_broad_search(query: str, rapidapi_key: str, pages: int = 1) -> list:
+    """Search across LinkedIn/Indeed/Glassdoor via JSearch (RapidAPI)."""
+    jobs = []
+    for page in range(1, pages + 1):
+        try:
+            resp = requests.get(
+                'https://jsearch.p.rapidapi.com/search',
+                headers={
+                    'X-RapidAPI-Key':  rapidapi_key,
+                    'X-RapidAPI-Host': 'jsearch.p.rapidapi.com',
+                },
+                params={
+                    'query':      query,
+                    'page':       str(page),
+                    'num_pages':  '1',
+                    'country':    'us',
+                    'date_posted': 'week',
+                },
+                timeout=30,
+            )
+            resp.raise_for_status()
+            data = resp.json()
+        except Exception as e:
+            print(f'    JSearch error for "{query}" page {page}: {e}')
+            break
+
+        for item in data.get('data', []):
+            city    = item.get('job_city') or ''
+            state   = item.get('job_state') or ''
+            country = item.get('job_country') or ''
+            loc_parts = [p for p in [city, state, country] if p]
+            location = ', '.join(loc_parts) if loc_parts else ('Remote' if item.get('job_is_remote') else '')
+
+            posted = (item.get('job_posted_at_datetime_utc') or '')[:10]
+
+            jobs.append({
+                'job_title':    item.get('job_title', ''),
+                'company':      item.get('employer_name', ''),
+                'job_url':      item.get('job_apply_link') or item.get('job_url', ''),
+                'description':  (item.get('job_description') or '')[:8000],
+                'date_posted':  posted,
+                'location_raw': location,
+            })
+
+        time.sleep(0.5)
+
+    return jobs
+
+
 FETCHERS = {
     'ashby':      fetch_ashby,
     'greenhouse': fetch_greenhouse,

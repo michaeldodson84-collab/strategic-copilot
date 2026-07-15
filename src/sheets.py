@@ -13,6 +13,7 @@ RESULTS_TAB    = '3 - Opportunities CRM'
 SCORED_TAB     = 'Scored URLs'
 COMPANIES_TAB  = 'Config - Companies'
 PROFILE_TAB    = 'Config - Profile'
+SEARCH_TAB     = 'Config - Search Terms'
 
 RESULTS_HEADERS = [
     'Job Title', 'Company', 'Job URL', 'Source Lane', 'Date Posted', 'Days Since Posted',
@@ -31,6 +32,16 @@ _PROFILE_PLACEHOLDER = [
     ['Seniority Keywords', 'head of, vp, vice president, director, chief, principal, managing director, general manager'],
     ['Target Functions',   'gtm, go-to-market, sales, revenue, commercial, product ops, product operations, product strategy, business ops, business operations, strategy, transformation, enablement, customer success, partnerships, alliances, ai strategy, enterprise, growth, chief of staff, value engineering'],
     ['Exclude Functions',  'engineer, legal, counsel, compliance, finance, accounting, recruiter, recruiting, cybersecurity, data science, machine learning'],
+    ['Description AI Signals',     'ai, artificial intelligence, automation, agentic, machine learning, llm, generative ai'],
+    ['Description Domain Signals', 'gtm, go-to-market, revenue operations, revops, sales operations, sales strategy, commercial operations'],
+]
+
+_SEARCH_PLACEHOLDER = [
+    ['AI GTM transformation director OR senior director',         'Y', '1'],
+    ['GTM AI operations senior director VP',                      'Y', '1'],
+    ['sales operations AI automation director',                   'Y', '1'],
+    ['revenue operations AI strategy VP director',                'Y', '1'],
+    ['go-to-market AI transformation senior director',            'Y', '1'],
 ]
 
 _COMPANIES_PLACEHOLDER = [
@@ -41,6 +52,7 @@ _COMPANIES_PLACEHOLDER = [
 _TAB_SETUP = [
     (COMPANIES_TAB, ['Company Name', 'ATS Type', 'ATS Handle', 'Active', 'Seniority Override'], _COMPANIES_PLACEHOLDER),
     (PROFILE_TAB,   ['Field', 'Value'],                                   _PROFILE_PLACEHOLDER),
+    (SEARCH_TAB,    ['Query', 'Active', 'Pages'],                         _SEARCH_PLACEHOLDER),
     (SCORED_TAB,    ['Job URL'],                                          []),
     (RESULTS_TAB,   RESULTS_HEADERS,                                      []),
 ]
@@ -102,6 +114,19 @@ def load_companies(client, spreadsheet_id: str) -> list:
     ws = _ws(client, spreadsheet_id, COMPANIES_TAB)
     records = ws.get_all_records()
     return [r for r in records if str(r.get('Active', '')).strip().upper() == 'Y']
+
+
+def load_search_terms(client, spreadsheet_id: str) -> list:
+    ws = _ws(client, spreadsheet_id, SEARCH_TAB)
+    records = ws.get_all_records()
+    return [
+        {
+            'query': str(r.get('Query', '')).strip(),
+            'pages': int(r.get('Pages', 1) or 1),
+        }
+        for r in records
+        if str(r.get('Active', '')).strip().upper() == 'Y' and str(r.get('Query', '')).strip()
+    ]
 
 
 def load_profile(client, spreadsheet_id: str) -> dict:

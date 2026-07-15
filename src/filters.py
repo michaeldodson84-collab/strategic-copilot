@@ -1,5 +1,15 @@
 from datetime import datetime, timedelta
 
+# Default keywords for description-level pre-filter (broad search only)
+_DEFAULT_AI_SIGNALS = [
+    'ai', 'artificial intelligence', 'automation', 'agentic', 'machine learning',
+    'llm', 'generative ai', 'ai-enabled', 'ai-driven', 'ai strategy',
+]
+_DEFAULT_DOMAIN_SIGNALS = [
+    'gtm', 'go-to-market', 'revenue operations', 'revops', 'sales operations',
+    'sales strategy', 'commercial operations', 'field operations',
+]
+
 # Known non-US location keywords — used when Location = "US only"
 _NON_US = [
     'united kingdom', 'london', 'england', 'scotland', 'ireland', 'edinburgh', 'manchester',
@@ -84,6 +94,19 @@ def _location_ok(loc: str, mode: str) -> bool:
 
     # "any" or anything else — no filtering
     return True
+
+
+def passes_description_filter(job: dict, profile: dict = None) -> bool:
+    """Require AI signal + GTM/domain signal both present in description. Used for broad search only."""
+    profile = profile or {}
+    desc = (job.get('description') or '').lower()
+    if not desc:
+        return True  # no description available — let title filter and scorer decide
+
+    ai_signals     = _parse_list(profile.get('description_ai_signals', ''))     or _DEFAULT_AI_SIGNALS
+    domain_signals = _parse_list(profile.get('description_domain_signals', '')) or _DEFAULT_DOMAIN_SIGNALS
+
+    return any(s in desc for s in ai_signals) and any(s in desc for s in domain_signals)
 
 
 def passes_title_filter(job: dict, profile: dict = None) -> bool:
