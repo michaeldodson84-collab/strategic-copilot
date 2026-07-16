@@ -1,0 +1,181 @@
+This role is primarily research-focused, with an emphasis on driving product decisions through insights, while using design as a tool to communicate and validate ideas.
+
+The Senior UX Researcher will lead end-to-end research initiatives, synthesize findings into actionable recommendations, and partner closely with product, design, and engineering to inform PetPlace’s growing suite of digital products.
+
+The ideal candidate has at least 5 years of experience in UX research or a related field, a strong portfolio demonstrating impactful research, and a passion for uncovering user needs and translating insights into meaningful product outcomes.
+
+Job Location: Remote – USA
+
+Main Responsibilities: 
+
+Research Strategy & Execution: Plan and conduct generative and evaluative research (interviews, usability testing, surveys, field studies) aligned to product and business goals, using appropriate qualitative and quantitative methods 
+Insight Generation & Storytelling: Synthesize research findings into clear, actionable insights and deliver compelling artifacts (reports, presentations, journey maps) that drive decision-making 
+Product & Stakeholder Influence: Partner with product, design, and engineering to embed insights across the product lifecycle and influence decisions through strong storytelling and evidence-based recommendations 
+Research Operations & Impact Scaling: Contribute to research processes, repositories, and best practices to enable continuous discovery and increase the reach and impact of insights 
+Concepting & Validation: Translate insights into user flows, wireframes, or lightweight prototypes to communicate ideas and test hypotheses 
+Advocacy: Champion a user-centered mindset and promote research-driven decision-making across the organization 
+
+Basic Qualifications: 
+
+Bachelor’s or Master’s degree in Human-Computer Interaction, UX Design, Computer Science, Psychology, or a related field 
+5+ years of professional experience in UX research or a related discipline 
+Strong portfolio demonstrating end-to-end research and measurable impact on product decisions 
+Experience combining qualitative and quantitative data to inform decisions 
+Ability to translate complex findings into clear, actionable insights 
+Experience owning research that influenced product direction or measurable business outcomes 
+Strong communication, storytelling, and stakeholder management skills 
+Experience with research tools such as Ballpark, Dig One Upsiide, Qualtrics, SurveyMonkey, etc. 
+Working knowledge of analytics tools such as Google Analytics 
+Exposure to A/B testing and experimentation frameworks 
+Proficiency with research and prototyping tools such as Figma and Figjam 
+
+Preferred Qualifications: 
+
+Strong communication and interpersonal skills. 
+Experience in e-commerce, pet services, or health-related digital platforms 
+Familiarity with accessibility and inclusive research practices 
+Experience working in Agile product environments 
+Exposure to SQL or collaboration with data/analytics teams 
+
+You are a high-agency researcher: someone who moves toward ambiguity, takes ownership without waiting for perfect direction, and uses research, data, and AI-native tools to help teams make better decisions faster. You know how to choose the right method, run rigorous studies, synthesize quickly, and make insights actionable for product, design, engineering, marketing, operations, sales, and leadership partners. You are comfortable with both generative and evaluative research, and you know that the best research changes decisions, not just documents findings.
+
+You are AI-forward without being AI-naive. You are curious about tools like Claude, ChatGPT, Codex, NotebookLM, Dovetail AI, Maze AI, synthetic-data workflows, transcript analysis tools, MCP-enabled workflows, or similar tools, and you have probably tried some of them before they were fully ready. You understand that these tools can accelerate desk research, synthesis, pattern detection, research operations, and storytelling, but that they also introduce bias, privacy, quality, and interpretation risks that researchers need to manage carefully.
+
+You combine strong research craft with pragmatic product judgment. You can listen deeply to families, providers, and internal teams, then translate what you learn into product direction, experience strategy, and clear next steps. You are energized by mission-driven work and by the chance to improve experiences that affect families during stressful, emotional, high-stakes decisions.
+
+What You Will Do
+
+Lead research across Consumer and Provider experiences
+
+Independently own generative and evaluative research across Consumer and Provider experiences, helping teams understand APFM's two core customers: families navigating care decisions and providers growing their businesses while delivering care.
+Shape and maintain a practical research plan tied to product strategy, design priorities, marketplace questions, and leadership decisions.
+Plan and run interviews, usability studies, concept tests, journey research, surveys, diary or longitudinal studies when appropriate, and lightweight mixed-method studies.
+Help teams understand families navigating senior care decisions and providers managing lead quality, engagement, and conversion.
+
+Turn insight into product and design direction
+
+Synthesize findings into crisp, decision-oriented artifacts that influence roadmap, product and user experience direction, service design, and product strategy, connecting research to the broader care placement journey where family needs, provider needs, advisor workflows, AI capabilities, and business outcomes intersect.
+Partner with Product, Design, Analytics, Engineering, Marketing, Operations, Sales, and customer-facing teams to connect qualitative insight with behavioral, funnel, marketplace, and business data.
+Identify cross-squad patterns, unmet needs, trust gaps, high-risk assumptions, and experience risks before they become delivery problems.
+Facilitate conversations that help teams align on what we know, what we need to learn, and what decisions should change.
+
+Strengthen research quality and reuse
+
+Contribute to repeatable research practices so teams can learn faster without lowering the quality bar.
+Use and improve lightweight rituals, templates, participant pipelines, and insight repositories that make Consumer and Provider insight easier to reuse.
+Partner with designers and product managers on practical research planning, method selection, and evidence-backed decisions.
+Model strong research craft and help teams choose the right level of rigor for the question, from rapid directional learning to deeper strategic research.
+
+Increase research leverage with AI
+
+Experiment with AI-assisted workflows to accelerate research planning, desk research, transcript review, synthesis, pattern detection, and insight sharing.
+Use AI responsibly: protect participant privacy, check for hallucinations or overconfident summaries, and keep human interpretation at the center of research judgment.
+Help APFM evaluate AI-enabled product experiences for trust, usefulness, clarity, safety, adoption, and edge cases in moments where families and providers need confidence.
+Share what you are learning with Product, Design, Analytics, Engineering, Marketing, Operations, Sales, and research partners so the team gets better together.
+
+Qualifications
+
+5+ years of user research, UX research, product research, design research, or mixed-methods research experience.
+Strong command of qualitative research methods, including interviewing, usability testing, synthesis, and insight storytelling.
+Experience influencing product strategy and design direction through research.
+Ability to operate in ambiguity and prioritize research efforts against business, product, customer, and marketplace needs.
+Experience pairing qualitative research with analytics, experimentation, surveys, funnel data, or operational data.
+Demonstrated curiosity and hands-on experimentation with AI tools in the research or product development process.
+Ability to explain not just what you learned, but how your methods, evidence, constraints, and judgment shaped product decisions.
+Strong facilitation and communication skills with designers, product managers, engineers, analysts, marketers, operators, sales partners, and senior stakeholders.
+Experience in marketplaces, healthcare, senior care, consumer decision journeys, B2B workflows, provider experiences, or high-trust service experiences is a plus.
+Bonus: examples of research artifacts, passion projects, prototypes, side projects, or AI-assisted experiments that show how you think, learn, and make evidence useful.
+
+What You’ll Do
+
+Own end-to-end research initiatives 
+
+Translate research objectives into structured project plans with a clearly outlined approach, timelines and deliverables.
+Proactively identify opportunities where research would bring clarity to ambiguity. 
+Kick off studies, manage timelines, communicate proactively with stakeholders, and make sure insights don't gather dust in a deck.
+
+Translate insights into impact
+
+Synthesize raw data into structured, insights-led narratives that clearly articulate implications and recommended actions for Product and Design.
+Tailor stakeholder conversations to the right audience and know how to move a room from insights to decision.
+Collaborate with Data/Analytics to connect qualitative findings with quantitative signals.
+
+Operational excellence
+
+Manage multiple research initiatives simultaneously across product squads. 
+Prioritize competing research needs across fast-paced, simultaneous workstreams.
+Own and evolve the research repository, setting documentation standards for the function.
+Provide feedback and informal mentorship to newer researchers as the team grows.
+
+Collaborate cross-functionally
+
+Build strong, solutions-oriented relationships across Product, Design, Content, Partnerships and Data.
+Embed within product squads to scope research, align on decision criteria and participate in key rituals (planning, reviews, discovery sessions).
+Help establish the norms, standards, and culture of a research practice that's still taking shape.
+
+What We’re Looking For
+
+5+ years in UX research, consumer insights, or a related field
+Proven track record of independently leading mixed-methods research, including survey design, moderated and unmoderated interviews, usability testing, diary studies, and more. 
+Demonstrated ability to synthesize findings into strategic recommendations with clearly defined implications, not just summaries
+Strong written and verbal communication skills; comfortable producing first-draft deliverables with minimal oversight.
+Experience working directly with product and design teams in an agile work environment
+Strong project and stakeholder management skills across multiple simultaneous initiatives
+Comfort with data and analytics, including reading dashboards and incorporating quantitative metrics into research
+
+Who You Are
+
+Resourceful and solution-oriented: you roll up your sleeves, experiment with new tools when it makes sense, and find creative paths through hard problems
+Comfortable with ambiguity: you are able to bring structure to undefined problems without waiting for perfect conditions
+A natural collaborator: you genuinely enjoy building relationships across teams, not just working alongside them.
+
+Nice To Have
+
+Experience working in loyalty, travel, or credit cards
+Experience in early-stage or evolving research functions.
+Experience working on 0 to 1 product development. 
+Familiarity with modern research platforms and tooling (e.g. UserTesting, SurveyMonkey, Dscout, etc.)
+Familiarity with SQL or similar tools for pulling and exploring data independently.
+
+This position offers the opportunity to establish and advance UX research practices within a growing product organization.
+
+You will lead complex research initiatives, uncover meaningful user insights, and influence product strategy across design, engineering, and business teams.
+
+The role focuses on improving the experiences of finance professionals working with complex, data-intensive applications.
+
+You will combine advanced research methodologies, AI-enabled workflows, and strong storytelling skills to create measurable impact.
+
+This is an opportunity for an experienced researcher to champion user-centered design and help build a culture of continuous learning and iteration.
+
+Accountabilities
+
+The Senior User Experience Researcher II will lead research strategy, establish best practices, and translate user insights into actionable improvements across the product lifecycle.
+
+Evaluate the current product landscape and develop a UX metrics approach to measure usability, satisfaction, and experience improvements.
+Lead generative and evaluative research initiatives, conducting original studies when needed and enabling designers and teams to apply effective research methods.
+Define research strategies and methodologies aligned with product roadmaps, business objectives, and user needs.
+Partner with Product, Design, and Engineering teams to identify research opportunities and solve complex customer challenges.
+Build and maintain a long-term customer research panel, ensuring effective participant management and representative user samples.
+Synthesize qualitative and quantitative findings into clear recommendations that influence product strategy and design decisions.
+Present research insights and strategic recommendations to stakeholders across all levels of the organization.
+Establish responsible AI practices within UX research, including validating AI-generated outputs, protecting customer information, and documenting research processes.
+Mentor and guide designers and junior researchers by sharing best practices, providing feedback, and improving research capabilities.
+Support research operations through tools, templates, reporting frameworks, and continuous process improvements.
+Promote a user-centered culture by advocating for customer needs throughout product development and iteration.
+
+Requirements
+
+The ideal candidate brings extensive UX research experience, strong analytical abilities, and the communication skills needed to influence complex product decisions.
+
+Bachelor’s degree in Human-Computer Interaction (HCI), Cognitive Psychology, or a related field, or equivalent professional experience.
+9+ years of experience in UX research or a related discipline, including experience with enterprise software or data-heavy products.
+Proven experience leading research projects that have influenced product direction and user experience improvements.
+Expertise across multiple research methodologies, including usability testing, interviews, surveys, field studies, and qualitative analysis.
+Experience using AI tools to enhance research workflows, synthesize findings, and develop research materials.
+Strong understanding of user-centered design principles and usability best practices.
+Ability to independently plan, execute, and communicate complex research initiatives.
+Excellent storytelling and presentation skills, with the ability to influence cross-functional stakeholders.
+Strong problem-solving skills, curiosity, empathy, and the ability to understand complex user workflows.
+Experience working independently in remote environments while collaborating effectively with distributed teams.
+Familiarity with finance-related enterprise software, data-intensive applications, or complex business workflows is preferred.
+Advanced degree in HCI, Cognitive Psychology, or a related field is a plus.
