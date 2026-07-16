@@ -1,0 +1,64 @@
+MICHAEL DODSON
+Fayetteville, AR 72704  |  714.884.0323  |  michael.c.dodson@outlook.com  |  linkedin.com/in/michael-dodson
+PROFESSIONAL PROFILE
+User-centered researcher and strategist who helps stakeholders make decisions with confidence by turning complex data into actionable design and product directions. Proven experience leading research for large consumer platforms, including foundational research for one of the world's largest email platforms (Yahoo Mail, 225M+ users). Track record of shaping product strategy and executive decision-making from foundational discovery through evaluative testing. Impact includes a 9% ARPU lift from a full-app redesign driven by research spanning diary studies, foundational discovery, and rapid iterative testing.
+CORE COMPETENCIES
+Mixed-Methods Research
+Data Driven Design 
+Concept & Usability Testing
+Diary Studies & Longitudinal Research
+Research Infrastructure Building
+Cross-Functional Collaboration
+Product Strategy & Stakeholder Influence
+Survey Design & Analysis
+Behavioral & Engagement Analysis
+Research Storytelling 
+
+EXPERIENCE AND IMPACT
+Yahoo Inc.   Remote 2022 – 2026
+Sr. UX Researcher
+Led research for one of the world's largest email platforms, Yahoo Mail, collaborating with product managers, data scientists, designers, and development teams. Operated at the intersection of research and organizational decision-making, facilitating alignment across competing priorities and translating complex user behaviors into clear direction for design and feature development.
+Led rapid iterative, evaluative research for a full-app redesign resulting in a 9% lift in Average Revenue Per User, partnering directly with product and executive leadership to align research findings with strategic priorities.
+Conducted foundational research to uncover user motivations and mental models around email retrieval, translating insights into unmet needs that shaped 'Smart Search' filters and increased successful searches by 6%.
+Defined Yahoo Mail's AI research strategy for AI-native features like Smart Compose and Smart Search, positioning AI as a core differentiator in the inbox experience.
+Led foundational discovery research that translated ambiguous user mental models into clear product direction for the shipped redesign of Yahoo Mail's Receipts tab (a 7.7M MAU surface with a 40% in-session action rate).
+Maintained and refreshed a longitudinal Yahoo Mail user panel on Rally to support recurring research needs, addressing a hard-to-reach population where Yahoo users represent a small, skewed-older fraction of the email market dominated by Gmail.
+Conducted a diary study to uncover longitudinal user behaviors and pain points in the email experience, directly informing the strategic direction for a full-app redesign.
+Designed and launched an annual user experience tracker survey, providing longitudinal quantitative signal to complement qualitative discovery and track shifts in user sentiment and engagement over time.
+Led phased generative and evaluative research informing a net-new ecommerce feature that demonstrated a 12% revenue increase in a controlled experiment.
+Facilitated User Empathy workshops at leadership and strategy offsites, connecting user insights directly to organizational and product decision-making.
+Integrated qualitative insights with quantitative product signals to evaluate feature usability, trust, and adoption, translating findings into roadmap decisions alongside product and engineering partners.
+UserZoom   Remote 2021 – 2022
+Sr. UX Researcher
+Directed UX research initiatives for a high-profile client portfolio including Verizon, LinkedIn, Anthem Health, and the Wall Street Journal. Designed and executed evaluative research strategies across B2B and B2C contexts, translating findings into actionable recommendations that drove design optimization across industries and product types.
+Maintained 100% on-time delivery and 5/5 client satisfaction scores across all engagements.
+Spearheaded the planning and execution of UX research initiatives for leading clients such as Verizon, Anthem Health Insurance, WSJ, and LinkedIn; piloted tree testing to inform redesign of Anthem's information architecture, plus usability testing for core user groups such as insurance analysts.
+Applied evaluative research methodologies (e.g.,  tree tests, card sorts, usability tests) to gain holistic insight into end-to-end user experience across client products.
+Adapted research strategies to quickly changing client priorities while maintaining quality in a fast-paced, multi-account environment.
+JB Hunt   Lowell, AR 2019 – 2021
+UX Researcher II
+Supported a large-scale enterprise transition to web-based platforms for a Fortune 500 logistics company, conducting UX research that directly influenced design and development decisions.
+Built and launched an internal UEQ benchmarking program from the ground up, giving product and design teams a repeatable, quantitative framework to connect research insights to feature impact.
+Partnered cross-functionally with technical and non-technical stakeholders to ensure the integrity of the user experience through a large-scale enterprise platform transition.
+Provided training, mentorship, and support to junior researchers, contributing to team knowledge-sharing and the maturation of the research practice.
+Communicated research findings across technical and non-technical stakeholders, contributing to process improvements that addressed operational inefficiencies.
+Conducted A/B testing and experimental design to determine optimal solutions and strengthen the usability of client products.
+EDUCATION
+Master's Degree in Anthropology, 2019
+University of Alabama, Tuscaloosa, AL
+Relevant Coursework: Ethnography, Research Methods, Advanced Research Methods, Biostatistics 
+Thesis: “Sensory Knowledge and Embodied Cultural Capital Among Coffee Connoisseurs in West and Central Alabama”
+
+Bachelor's Degree in Anthropology, 2017
+California State University Long Beach, Long Beach, CA
+CERTIFICATIONS
+Build Productivity Skills with Gen AI, LinkedIn Learning
+Advanced Google Analytics, Google
+Google Analytics for Beginners, Google
+AWARDS AND HONORS
+URock (UX Dept. Employee of the Month), J.B. Hunt
+TECHNICAL PROFICIENCIES
+Google Analytics, Claude Code, SurveyMonkey, Qualtrics, R, RStudio, SPSS,  FigJam, Miro, Microsoft Office Suite, Google Suite, Dscout, UserTesting, Optimal Workshop, SQL 
+
+
+
