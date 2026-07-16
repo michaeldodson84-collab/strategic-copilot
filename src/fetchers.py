@@ -191,20 +191,14 @@ def fetch_broad_search(query: str, rapidapi_key: str) -> list:
             print(f'    JSearch HTTP {resp.status_code} for "{query}": {resp.text[:200]}')
             return []
         data = resp.json()
-        print(f'    JSearch top-level keys: {list(data.keys())}')
         raw_data = data.get('data')
-        print(f'    JSearch data type: {type(raw_data).__name__}')
         if isinstance(raw_data, dict):
-            print(f'    JSearch data keys: {list(raw_data.keys())}')
-            # Try common nested locations
-            raw_items = raw_data.get('jobs') or raw_data.get('results') or raw_data.get('job_postings') or []
+            raw_items = raw_data.get('jobs') or raw_data.get('results') or []
         elif isinstance(raw_data, list):
             raw_items = raw_data
         else:
             raw_items = []
         print(f'    JSearch: {len(raw_items)} results')
-        if raw_items and isinstance(raw_items[0], dict):
-            print(f'    JSearch item keys: {list(raw_items[0].keys())[:15]}')
     except Exception as e:
         print(f'    JSearch exception for "{query}": {type(e).__name__}: {str(e)[:200]}')
         return []
@@ -212,13 +206,11 @@ def fetch_broad_search(query: str, rapidapi_key: str) -> list:
     jobs = []
     for item in raw_items:
         if not isinstance(item, dict):
-            print(f'    Skipping non-dict item: {str(item)[:100]}')
             continue
-        city      = item.get('job_city') or ''
-        state     = item.get('job_state') or ''
-        loc_parts = [p for p in [city, state] if p]
-        location  = ', '.join(loc_parts) if loc_parts else ('Remote' if item.get('job_is_remote') else '')
-        posted    = (item.get('job_posted_at_datetime_utc') or '')[:10]
+        location = 'Remote' if item.get('job_is_remote') else ''
+        # search-v2 uses job_posted_at (ISO string or epoch); extract date portion
+        posted_raw = item.get('job_posted_at') or item.get('job_posted_at_datetime_utc') or ''
+        posted = str(posted_raw)[:10] if posted_raw else ''
 
         jobs.append({
             'job_title':    item.get('job_title', ''),
